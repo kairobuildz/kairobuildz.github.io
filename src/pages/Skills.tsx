@@ -1,0 +1,122 @@
+import { motion } from "framer-motion";
+import { Code, Database, Layers, Cpu, Paintbrush, ShieldCheck, Video } from "lucide-react";
+
+const skills = [
+  { icon: Code, name: "Luau / Lua", level: 95 },
+  { icon: Layers, name: "UI Design (Roblox)", level: 85 },
+  { icon: Database, name: "DataStore / ProfileService", level: 90 },
+  { icon: Cpu, name: "Game Systems & Frameworks", level: 88 },
+  { icon: Paintbrush, name: "Building & Level Design", level: 70 },
+  { icon: ShieldCheck, name: "Anti-Exploit / Security", level: 80 },
+];
+
+// Placeholder videos – replace URLs with your own YouTube embeds
+const videos: { title: string; embedUrl: string }[] = [
+  // Example:
+  // { title: "Combat System Showcase", embedUrl: "https://www.youtube.com/embed/VIDEO_ID" },
+];
+
+const Skills = () => (
+  <div className="min-h-screen pt-24 pb-16">
+    <div className="container mx-auto px-4">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="mb-16 text-center"
+      >
+        <p className="mb-2 font-display text-sm tracking-[0.3em] uppercase text-primary">Expertise</p>
+        <h1 className="font-display text-4xl md:text-5xl font-black tracking-tight gradient-text">
+          My Skills
+        </h1>
+      </motion.div>
+
+      {/* Skill bars */}
+      <div className="mx-auto max-w-2xl space-y-6 mb-24">
+        {skills.map((skill, i) => (
+          <motion.div
+            key={skill.name}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
+          >
+            <div className="mb-2 flex items-center justify-between">
+              <span className="flex items-center gap-2 font-display text-sm tracking-wider">
+                <skill.icon className="h-4 w-4 text-primary" />
+                {skill.name}
+              </span>
+              <span className="font-display text-xs text-muted-foreground">{skill.level}%</span>
+            </div>
+            <div className="h-2 overflow-hidden rounded-full bg-secondary">
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: `${skill.level}%` }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: i * 0.1 }}
+                className="h-full rounded-full"
+                style={{
+                  background: "linear-gradient(90deg, hsl(195 100% 50%), hsl(270 80% 60%))",
+                  boxShadow: "0 0 12px hsl(195 100% 50% / 0.4)",
+                }}
+              />
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Video section */}
+      <div className="neon-line mx-auto mb-16 max-w-xl" />
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-12 text-center"
+      >
+        <Video className="mx-auto mb-3 h-8 w-8 text-primary" />
+        <h2 className="font-display text-3xl font-bold tracking-wider gradient-text">Showcase Videos</h2>
+        <p className="mt-2 text-sm text-muted-foreground">
+          {videos.length === 0 ? "Videos coming soon — stay tuned!" : "Check out my latest work"}
+        </p>
+      </motion.div>
+
+      {videos.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto max-w-4xl">
+          {videos.map((video, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
+              className="overflow-hidden rounded-lg border border-border bg-card card-hover"
+            >
+              <div className="aspect-video">
+                <iframe
+                  src={video.embedUrl}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="h-full w-full"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-display text-sm font-bold tracking-wider">{video.title}</h3>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      ) : (
+        <div className="mx-auto max-w-md rounded-lg border border-dashed border-border bg-card/50 p-12 text-center">
+          <Video className="mx-auto mb-3 h-10 w-10 text-muted-foreground/40" />
+          <p className="font-display text-xs tracking-widest uppercase text-muted-foreground">
+            Add your YouTube embed URLs in the code to showcase your work
+          </p>
+        </div>
+      )}
+    </div>
+  </div>
+);
+
+export default Skills;
