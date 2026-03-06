@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const stats = [
-  { label: "Roblox Username", value: "daantjespower" },
+  { label: "Roblox Username", value: "daantjesspower" },
   { label: "Specialty", value: "Scripting" },
   { label: "Language", value: "Luau" },
 ];

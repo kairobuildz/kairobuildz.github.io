@@ -72,11 +72,11 @@ const Contact = () => {
               <h2 className="mb-1 font-display text-lg font-bold tracking-wider">Roblox</h2>
               <Button asChild variant="link" className="text-accent hover:text-accent font-bold text-2xl">
                 <a
-                  href="https://www.roblox.com/users/profile?username=daantjespower"
+                  href="https://www.roblox.com/users/profile?username=daantjesspower"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  daantjespower
+                  daantjesspower
                 </a>
               </Button>
             </motion.div>
