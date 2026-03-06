@@ -81,6 +81,7 @@ const Contact = () => {
               </Button>
             </motion.div>
           </div>
+        </motion.div>
       </div>
     </div>
   );
