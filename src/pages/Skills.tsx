@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { Code, Database, Layers, Cpu, Paintbrush, ShieldCheck, Video } from "lucide-react";
+import { Code, Database, Cpu, ShieldCheck, Video } from "lucide-react";
 
 const skills = [
   { icon: Code, name: "Luau / Lua", level: 95 },
-  { icon: Layers, name: "UI Design (Roblox)", level: 85 },
+  
   { icon: Database, name: "DataStore / ProfileService", level: 90 },
   { icon: Cpu, name: "Game Systems & Frameworks", level: 88 },
-  { icon: Paintbrush, name: "Building & Level Design", level: 70 },
+  
   { icon: ShieldCheck, name: "Anti-Exploit / Security", level: 80 },
 ];
 
@@ -111,7 +111,7 @@ const Skills = () => (
         <div className="mx-auto max-w-md rounded-lg border border-dashed border-border bg-card/50 p-12 text-center">
           <Video className="mx-auto mb-3 h-10 w-10 text-muted-foreground/40" />
           <p className="font-display text-xs tracking-widest uppercase text-muted-foreground">
-            Add your YouTube embed URLs in the code to showcase your work
+            Coming soon
           </p>
         </div>
       )}
