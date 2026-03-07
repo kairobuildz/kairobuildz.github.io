@@ -10,10 +10,8 @@ const skills = [
   { icon: ShieldCheck, name: "Anti-Exploit / Security", level: 80 },
 ];
 
-// Placeholder videos – replace URLs with your own YouTube embeds
-const videos: { title: string; embedUrl: string }[] = [
-  // Example:
-  // { title: "Combat System Showcase", embedUrl: "https://www.youtube.com/embed/VIDEO_ID" },
+const videos: { title: string; videoUrl: string }[] = [
+  { title: "Dash Function + Double Jump Feature", videoUrl: "/videos/dash-double-jump.mp4" },
 ];
 
 const Skills = () => (
@@ -93,11 +91,9 @@ const Skills = () => (
               className="overflow-hidden rounded-lg border border-border bg-card card-hover"
             >
               <div className="aspect-video">
-                <iframe
-                  src={video.embedUrl}
-                  title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+                <video
+                  src={video.videoUrl}
+                  controls
                   className="h-full w-full"
                 />
               </div>
