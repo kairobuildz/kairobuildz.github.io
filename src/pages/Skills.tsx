@@ -91,11 +91,9 @@ const Skills = () => (
               className="overflow-hidden rounded-lg border border-border bg-card card-hover"
             >
               <div className="aspect-video">
-                <iframe
-                  src={video.embedUrl}
-                  title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+                <video
+                  src={video.videoUrl}
+                  controls
                   className="h-full w-full"
                 />
               </div>
