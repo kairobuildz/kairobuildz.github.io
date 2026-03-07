@@ -10,10 +10,8 @@ const skills = [
   { icon: ShieldCheck, name: "Anti-Exploit / Security", level: 80 },
 ];
 
-// Placeholder videos – replace URLs with your own YouTube embeds
-const videos: { title: string; embedUrl: string }[] = [
-  // Example:
-  // { title: "Combat System Showcase", embedUrl: "https://www.youtube.com/embed/VIDEO_ID" },
+const videos: { title: string; videoUrl: string }[] = [
+  { title: "Dash Function + Double Jump Feature", videoUrl: "/videos/dash-double-jump.mp4" },
 ];
 
 const Skills = () => (
