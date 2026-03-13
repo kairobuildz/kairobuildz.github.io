@@ -10,7 +10,9 @@ const skills = [
   { icon: ShieldCheck, name: "Anti-Exploit / Security", level: 80 },
 ];
 
-const videos: { title: string; videoUrl: string }[] = [];
+const videos: { title: string; videoUrl: string }[] = [
+  { title: "Car Chassi(s)", videoUrl: "/videos/car-chassis.mp4" },
+];
 
 const Skills = () => (
   <div className="min-h-screen pt-24 pb-16">
