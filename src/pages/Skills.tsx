@@ -1,17 +1,25 @@
 import { motion } from "framer-motion";
-import { Code, Database, Cpu, ShieldCheck, Video } from "lucide-react";
+import { Code, Database, Cpu, ShieldCheck, Video, Globe, ExternalLink } from "lucide-react";
 
 const skills = [
   { icon: Code, name: "Luau / Lua", level: 95 },
-  
   { icon: Database, name: "DataStore / ProfileService", level: 90 },
   { icon: Cpu, name: "Game Systems & Frameworks", level: 88 },
-  
+  { icon: Globe, name: "Website Development", level: 82 },
   { icon: ShieldCheck, name: "Anti-Exploit / Security", level: 80 },
 ];
 
 const videos: { title: string; videoUrl: string }[] = [
   { title: "Car Chassi(s)", videoUrl: "/videos/car-chassis.mp4" },
+];
+
+const websites = [
+  {
+    title: "FuxionBuildz Portfolio",
+    description: "A portfolio website created for a client — showcasing their Roblox development & 3D art work.",
+    url: "https://fuxionbuildz.github.io/",
+    tags: ["React", "Portfolio", "Client Work"],
+  },
 ];
 
 const Skills = () => (
@@ -111,6 +119,61 @@ const Skills = () => (
           </p>
         </div>
       )}
+
+      {/* Website showcase section */}
+      <div className="neon-line mx-auto my-16 max-w-xl" />
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-12 text-center"
+      >
+        <Globe className="mx-auto mb-3 h-8 w-8 text-primary" />
+        <h2 className="font-display text-3xl font-bold tracking-wider gradient-text">Websites</h2>
+        <p className="mt-2 text-sm text-muted-foreground">Web projects I've built for clients</p>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto max-w-4xl">
+        {websites.map((site, i) => (
+          <motion.a
+            key={i}
+            href={site.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.15 }}
+            className="group overflow-hidden rounded-lg border border-border bg-card card-hover block"
+          >
+            <div className="aspect-video overflow-hidden bg-secondary">
+              <img
+                src="/images/fuxionbuildz-preview.png"
+                alt="FuxionBuildz Portfolio"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = 'none';
+                }}
+              />
+            </div>
+            <div className="p-4">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-display text-sm font-bold tracking-wider">{site.title}</h3>
+                <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+              </div>
+              <p className="text-xs text-muted-foreground mb-3">{site.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {site.tags.map((tag) => (
+                  <span key={tag} className="rounded-full bg-secondary px-2.5 py-0.5 font-display text-[10px] tracking-wider text-muted-foreground">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </motion.a>
+        ))}
+      </div>
     </div>
   </div>
 );
