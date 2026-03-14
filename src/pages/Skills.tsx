@@ -1,17 +1,25 @@
 import { motion } from "framer-motion";
-import { Code, Database, Cpu, ShieldCheck, Video } from "lucide-react";
+import { Code, Database, Cpu, ShieldCheck, Video, Globe, ExternalLink } from "lucide-react";
 
 const skills = [
   { icon: Code, name: "Luau / Lua", level: 95 },
-  
   { icon: Database, name: "DataStore / ProfileService", level: 90 },
   { icon: Cpu, name: "Game Systems & Frameworks", level: 88 },
-  
+  { icon: Globe, name: "Website Development", level: 82 },
   { icon: ShieldCheck, name: "Anti-Exploit / Security", level: 80 },
 ];
 
 const videos: { title: string; videoUrl: string }[] = [
   { title: "Car Chassi(s)", videoUrl: "/videos/car-chassis.mp4" },
+];
+
+const websites = [
+  {
+    title: "FuxionBuildz Portfolio",
+    description: "A portfolio website created for a client — showcasing their Roblox development & 3D art work.",
+    url: "https://fuxionbuildz.github.io/",
+    tags: ["React", "Portfolio", "Client Work"],
+  },
 ];
 
 const Skills = () => (
