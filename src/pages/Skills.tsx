@@ -19,6 +19,14 @@ const websites = [
     description: "A portfolio website created for a client — showcasing their Roblox development & 3D art work.",
     url: "https://fuxionbuildz.github.io/",
     tags: ["React", "Portfolio", "Client Work"],
+    image: "/images/fuxionbuildz-preview.png",
+  },
+  {
+    title: "RoTerminal",
+    description: "A real-time Roblox limited item tracker — browse catalog, search inventories, and monitor market trends.",
+    url: "https://roterminal.github.io/",
+    tags: ["React", "Market Tracker", "Client Work"],
+    image: "/images/roterminal-preview.png",
   },
 ];
 
