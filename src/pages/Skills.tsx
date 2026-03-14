@@ -149,7 +149,7 @@ const Skills = () => (
           >
             <div className="aspect-video overflow-hidden bg-secondary">
               <img
-                src="https://fuxionbuildz.github.io/og-image.png"
+                src="/images/fuxionbuildz-preview.png"
                 alt="FuxionBuildz Portfolio"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 onError={(e) => {
