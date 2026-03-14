@@ -19,6 +19,14 @@ const websites = [
     description: "A portfolio website created for a client — showcasing their Roblox development & 3D art work.",
     url: "https://fuxionbuildz.github.io/",
     tags: ["React", "Portfolio", "Client Work"],
+    image: "/images/fuxionbuildz-preview.png",
+  },
+  {
+    title: "RoTerminal",
+    description: "A real-time Roblox limited item tracker — browse catalog, search inventories, and monitor market trends.",
+    url: "https://roterminal.github.io/",
+    tags: ["React", "Market Tracker", "Client Work"],
+    image: "/images/roterminal-preview.png",
   },
 ];
 
@@ -149,8 +157,8 @@ const Skills = () => (
           >
             <div className="aspect-video overflow-hidden bg-secondary">
               <img
-                src="/images/fuxionbuildz-preview.png"
-                alt="FuxionBuildz Portfolio"
+                src={site.image}
+                alt={site.title}
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = 'none';
