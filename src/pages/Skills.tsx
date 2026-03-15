@@ -116,6 +116,9 @@ const Skills = () => (
               </div>
               <div className="p-4">
                 <h3 className="font-display text-sm font-bold tracking-wider">{video.title}</h3>
+                {video.subtitle && (
+                  <p className="text-[10px] text-muted-foreground tracking-wider mt-0.5">{video.subtitle}</p>
+                )}
               </div>
             </motion.div>
           ))}
