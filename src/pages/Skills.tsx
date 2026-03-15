@@ -11,7 +11,7 @@ const skills = [
 
 const videos: { title: string; videoUrl: string; category?: string; subtitle?: string }[] = [
   { title: "Car Chassi(s)", videoUrl: "/videos/car-chassis.mp4" },
-  { title: "Discord Bots", subtitle: "Moderation / Utility", videoUrl: "/videos/discord-bot-moderation.mp4", category: "Discord Bots" },
+  { title: "Discord Bot", subtitle: "Moderation", videoUrl: "/videos/discord-bot-moderation.mp4", category: "Discord Bots" },
 ];
 
 const websites = [
