@@ -9,8 +9,9 @@ const skills = [
   { icon: ShieldCheck, name: "Anti-Exploit / Security", level: 80 },
 ];
 
-const videos: { title: string; videoUrl: string }[] = [
+const videos: { title: string; videoUrl: string; category?: string; subtitle?: string }[] = [
   { title: "Car Chassi(s)", videoUrl: "/videos/car-chassis.mp4" },
+  { title: "Discord Bots", subtitle: "Moderation / Utility", videoUrl: "/videos/discord-bot-moderation.mp4", category: "Discord Bots" },
 ];
 
 const websites = [
@@ -115,6 +116,9 @@ const Skills = () => (
               </div>
               <div className="p-4">
                 <h3 className="font-display text-sm font-bold tracking-wider">{video.title}</h3>
+                {video.subtitle && (
+                  <p className="text-[10px] text-muted-foreground tracking-wider mt-0.5">{video.subtitle}</p>
+                )}
               </div>
             </motion.div>
           ))}
