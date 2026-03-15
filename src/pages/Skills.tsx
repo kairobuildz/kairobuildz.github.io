@@ -9,8 +9,9 @@ const skills = [
   { icon: ShieldCheck, name: "Anti-Exploit / Security", level: 80 },
 ];
 
-const videos: { title: string; videoUrl: string }[] = [
+const videos: { title: string; videoUrl: string; category?: string; subtitle?: string }[] = [
   { title: "Car Chassi(s)", videoUrl: "/videos/car-chassis.mp4" },
+  { title: "Discord Bots", subtitle: "Moderation / Utility", videoUrl: "/videos/discord-bot-moderation.mp4", category: "Discord Bots" },
 ];
 
 const websites = [
