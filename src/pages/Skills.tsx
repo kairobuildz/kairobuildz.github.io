@@ -29,6 +29,13 @@ const websites = [
     tags: ["React", "Market Tracker", "Client Work"],
     image: "/images/roterminal-preview.png",
   },
+  {
+    title: "Vexa",
+    description: "Fully Automated Crypto MiddleMan",
+    url: "https://vexa.ink/",
+    tags: ["Crypto", "Automation"],
+    image: "/images/vexa-preview.png",
+  },
 ];
 
 const Skills = () => (
